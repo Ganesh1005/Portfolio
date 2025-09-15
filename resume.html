@@ -9,10 +9,10 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts (MATCH About & Home) -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,6 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Ganesh</h1>
       </a>
@@ -53,7 +52,6 @@
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html" class="active">Resume</a></li>
           <li><a href="Myprojects.html">Projects</a></li>
-          
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -67,39 +65,32 @@
   </header>
 
   <main class="main">
-  <!-- Resume Section -->
-  <section id="resume" class="resume section">
-    <div class="container section-title text-center" data-aos="fade-up">
-      <h2>Resume</h2>
-      <p>Download my latest resume below.</p>
-    </div>
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Download my latest resume below.</p>
+      </div>
 
-    <div class="container d-flex justify-content-center" data-aos="zoom-in">
-      <a id="resume-download"
-         href="assets/docs/Jaya_Ganesh_Reddy_Resume.pdf"
-         download="Jaya_Ganesh_Reddy_Resume.pdf"
-         class="btn btn-primary btn-lg px-5 py-3">
-        <i class="bi bi-download me-2"></i> Download Resume
-      </a>
-    </div>
-  </section>
-</main>
+      <div class="container d-flex justify-content-center" data-aos="zoom-in">
+        <a id="resume-download"
+           href="assets/docs/Jaya_Ganesh_Reddy_Resume.pdf"
+           download="Jaya_Ganesh_Reddy_Resume.pdf"
+           class="btn btn-primary btn-lg px-5 py-3">
+          <i class="bi bi-download me-2"></i> Download Resume
+        </a>
+      </div>
+    </section>
+  </main>
 
-
-<footer id="footer" class="footer light-background">
-  <div class="container">
-    <div class="social-links d-flex justify-content-center">
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/jaya-ganesh-reddy-guggulla-86a026250" target="_blank" rel="noopener">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <!-- GitHub -->
-      <a href="https://github.com/Ganesh1005" target="_blank" rel="noopener">
-        <i class="bi bi-github"></i>
-      </a>
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://linkedin.com/in/jaya-ganesh-reddy-guggulla-86a026250" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Ganesh1005" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
@@ -127,7 +118,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const link = document.getElementById('resume-download');
-      // Only trigger once per session to avoid repeated downloads
       if (link && sessionStorage.getItem('resumeDownloaded') !== '1') {
         try { link.click(); } catch(e) {}
         sessionStorage.setItem('resumeDownloaded', '1');

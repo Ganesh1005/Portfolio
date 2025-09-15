@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Jaya Ganesh's portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Jaya Ganesh's Portfolio</title>
+  <meta name="description" content="Portfolio of Jaya Ganesh — Java Full Stack Developer · Software Engineer · Cloud Enthusiast">
+  <meta name="keywords" content="Java, Spring Boot, React, Software Engineer, Cloud, Portfolio">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts (MATCHES ABOUT PAGE) -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -27,15 +27,73 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  
+  <style>
+  /* ===== HERO ===== */
+  .hero-geo {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #000; /* pure black */
+  }
+  #particles-js { position: absolute; inset: 0; z-index: 0; }
+  .hero-content { position: relative; z-index: 2; text-align: center; width: 100%; }
+
+  /* Smaller hero title */
+  #hero-title {
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800; color: #fff; letter-spacing: .4px;
+    font-size: clamp(2.2rem, 6.5vw, 3.5rem); /* reduced size */
+    margin-bottom: .5rem;
+    text-shadow: 0 6px 22px rgba(0,0,0,.35);
+  }
+
+  #hero-subtitle { 
+    color: #cfe9ff; 
+    font-size: clamp(0.95rem, 2vw, 1.2rem); /* slightly smaller */
+    margin-bottom: 1.4rem; 
+    min-height: 1.4em; 
+  }
+
+  #typed::after { 
+    content: "▋"; margin-left: 4px; 
+    animation: caret 1.1s steps(1) infinite; 
+    color: #22d3ee; 
+  }
+  @keyframes caret { 50% { opacity: 0; } }
+
+  /* Button */
+  .btn-hero {
+    display: inline-block; 
+    padding: 10px 26px;  /* smaller */
+    border-radius: 999px;
+    background: #20c997; 
+    color: #fff; 
+    font-weight: 600; 
+    text-decoration: none; 
+    font-size: 1rem;       /* slightly smaller text */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); 
+    transition: background .2s ease, transform .2s ease, color .2s ease;
+  }
+  .btn-hero:hover { 
+    background: #18a27a; 
+    transform: translateY(-2px); 
+    color: #fff; /* ensure text stays white */
+  }
+</style>
+
 </head>
 
 <body class="index-page">
 
+  <!-- Header (identical to About page) -->
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Ganesh</h1>
       </a>
@@ -46,8 +104,6 @@
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="Myprojects.html">Projects</a></li>
-          
-          
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -58,54 +114,37 @@
         <a href="https://linkedin.com/in/jaya-ganesh-reddy-guggulla-86a026250" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
       </div>
 
-
     </div>
   </header>
 
   <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
-      <img src="assets/img/bghomepageimage.jpg" alt="" data-aos="fade-in">
-
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+    <section class="hero-geo">
+      <div id="particles-js"></div>
+      <div class="container hero-content">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Hi, I'm Jaya Ganesh</h2>
-            <p>I'm Passionate Java Full Stack Developer &amp; Software Engineer</p>
-            <a href="about.html" class="btn-get-started">About Me</a>
+          <div class="col-lg-10">
+            <h2 id="hero-title">Hi, I'm Jaya Ganesh</h2>
+            <p id="hero-subtitle"><span id="typed">Java Full Stack Developer</span></p>
+            <a href="Myprojects.html" class="btn-hero mt-2">Explore Projects</a>
           </div>
         </div>
       </div>
-
-    </section><!-- /Hero Section -->
-
+    </section>
   </main>
 
   <footer id="footer" class="footer light-background">
-  <div class="container">
-    <div class="social-links d-flex justify-content-center">
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/jaya-ganesh-reddy-guggulla-86a026250" target="_blank" rel="noopener">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <!-- GitHub -->
-      <a href="https://github.com/Ganesh1005" target="_blank" rel="noopener">
-        <i class="bi bi-github"></i>
-      </a>
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://linkedin.com/in/jaya-ganesh-reddy-guggulla-86a026250" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Ganesh1005" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -116,9 +155,47 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Main JS File -->
+  <!-- Particles.js -->
+  <script src="assets/vendor/particles/particles.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-</body>
+  <!-- Typed + Particles -->
+  <script>
+    (function () {
+      const roles = ['Java Full Stack Developer', 'Software Engineer', 'Cloud Enthusiast'];
+      const typedEl = document.getElementById('typed');
+      let idx = 0, pos = 0, typing = true;
+      function step() {
+        const text = roles[idx];
+        if (typing) {
+          pos++; typedEl.textContent = text.slice(0, pos);
+          if (pos === text.length) { typing = false; setTimeout(step, 900); return; }
+          setTimeout(step, 42);
+        } else {
+          pos--; typedEl.textContent = text.slice(0, pos);
+          if (pos === 0) { typing = true; idx = (idx + 1) % roles.length; setTimeout(step, 320); return; }
+          setTimeout(step, 24);
+        }
+      }
+      step();
 
+      particlesJS('particles-js', {
+        "particles": {
+          "number": { "value": 160, "density": { "enable": true, "value_area": 900 } },
+          "color": { "value": "#d9f2ff" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.7 },
+          "size": { "value": 2, "random": true },
+          "line_linked": { "enable": true, "distance": 130, "color": "#cfe9ff", "opacity": 0.45, "width": 1 },
+          "move": { "enable": true, "speed": 1.15, "random": true, "out_mode": "out" }
+        },
+        "interactivity": {
+          "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
+          "modes": { "grab": { "distance": 160, "line_linked": { "opacity": 0.8 } } }
+        },
+        "retina_detect": true
+      });
+    })();
+  </script>
+</body>
 </html>
